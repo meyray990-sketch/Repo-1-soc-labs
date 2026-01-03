@@ -1,0 +1,22 @@
+ # Splunk Alert Investigation – Failed Login Attempts
+
+## Alert Description
+Multiple failed login attempts detected from a single IP address.
+
+## Investigation Steps
+1. Identify the source IP
+2. Check number of attempts
+3. Review affected user accounts
+4. Correlate with successful logins
+5. Check geolocation (if available)
+
+## SPL Example
+index=security action=failure
+| stats count by src_ip user
+
+## MITRE ATT&CK
+- T1110: Brute Force
+
+## Outcome
+This activity may indicate a brute force attack and
+should be escalated if thresholds are exceeded.
