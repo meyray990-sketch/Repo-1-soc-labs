@@ -1,4 +1,4 @@
-# 🧪 SOC Labs
+#  SOC Labs
 
 This repository contains hands-on SOC analyst labs and notes
 focused on detection, investigation, and incident response.
